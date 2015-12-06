@@ -20,8 +20,13 @@ public:
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     QString dbName = "database.sqlite";
     void SortByName();
+    void SortByNameB();
+    void SortByGenderF();
+    void SortByGenderM();
 private:
     void openDatabase();
+    int born, died;
+    string name, gender;
 
 };
 

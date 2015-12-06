@@ -17,6 +17,24 @@ void Data::SortByName()
 {
     openDatabase();
         QSqlQuery query(db);
+        query.prepare("SELECT * FROM Persons ORDER BY Name DESC");
+        query.bindValue("Name", QString::fromStdString("*"));
+        query.bindValue("Gender", QString::fromStdString("*"));
+        query.bindValue("Born", QString::fromStdString("*"));
+        query.bindValue("Died", QString::fromStdString("*"));
+        query.exec();
+        while(query.next())
+            {
+                name = query.value("Name").toString().toStdString();
+                gender = query.value("Gender").toString().toStdString();
+                born = query.value("Born").toUInt();
+                died = query.value("Died").toUInt();
+            }
+}
+void Data::SortByNameB()
+{
+    openDatabase();
+        QSqlQuery query(db);
         query.prepare("SELECT * FROM Persons ORDER BY Name");
         query.bindValue("Name", QString::fromStdString("*"));
         query.bindValue("Gender", QString::fromStdString("*"));
@@ -25,24 +43,45 @@ void Data::SortByName()
         query.exec();
         while(query.next())
             {
-                // qDebug() << query.lastQuery();
-                // int id = query.value(0).toUInt();
-                string nafn = query.value("Name").toString().toStdString();
-                string gender = query.value("Gender").toString().toStdString();
-                int born = query.value("Born").toUInt();
-                int died = query.value("Died").toUInt();
-
-                if (died == 0)
-                {
-
-                    cout << "Name: " << nafn << endl << "Gender: " << gender << endl << "Born: " << born
-                         << endl << "Died: Alive!" << endl << endl;
-                }
-                else
-                {
-                    cout << "Name: " << nafn << endl << "Gender: " << gender << endl << "Born: " << born
-                         << endl << "Died: " << died  << " " << endl << endl;
-                }
+                name = query.value("Name").toString().toStdString();
+                gender = query.value("Gender").toString().toStdString();
+                born = query.value("Born").toUInt();
+                died = query.value("Died").toUInt();
             }
-    cout << endl << "##### THE END #####" << endl;
+}
+void Data::SortByGenderF()
+{
+    openDatabase();
+        QSqlQuery query(db);
+        query.prepare("SELECT * FROM Persons ORDER BY Gender");
+        query.bindValue("Name", QString::fromStdString("*"));
+        query.bindValue("Gender", QString::fromStdString("*"));
+        query.bindValue("Born", QString::fromStdString("*"));
+        query.bindValue("Died", QString::fromStdString("*"));
+        query.exec();
+        while(query.next())
+            {
+                name = query.value("Name").toString().toStdString();
+                gender = query.value("Gender").toString().toStdString();
+                born = query.value("Born").toUInt();
+                died = query.value("Died").toUInt();
+            }
+}
+void Data::SortByGenderM()
+{
+    openDatabase();
+        QSqlQuery query(db);
+        query.prepare("SELECT * FROM Persons ORDER BY Gender DESC");
+        query.bindValue("Name", QString::fromStdString("*"));
+        query.bindValue("Gender", QString::fromStdString("*"));
+        query.bindValue("Born", QString::fromStdString("*"));
+        query.bindValue("Died", QString::fromStdString("*"));
+        query.exec();
+        while(query.next())
+            {
+                name = query.value("Name").toString().toStdString();
+                gender = query.value("Gender").toString().toStdString();
+                born = query.value("Born").toUInt();
+                died = query.value("Died").toUInt();
+            }
 }
