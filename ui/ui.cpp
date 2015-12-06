@@ -85,7 +85,7 @@ void UI::listScientists()
     cout << "4: By gender (F/M)" << endl;
     cout << "5: By..." << endl;
 
-    cout << endl << "You can press 'M' for MAIN or 'Q' to QUIT." << endl;
+    cout << endl << "You can press 'M' to go back to MAIN or 'Q' to QUIT." << endl;
 
     cout << endl;
     cout << "Selection: ";
