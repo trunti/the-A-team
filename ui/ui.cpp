@@ -170,7 +170,7 @@ void UI::listComputers()
     case '4':
         cleanScreen();
         cout << "################## COMPUTERS (...) ###################" << endl << endl;
-        cout << "Skipta mer tu fyrir fallid sem synir tolvur eftir...i" << endl;
+        cout << "Skipta mer ut fyrir fallid sem synir tolvur eftir..." << endl;
         break;
     case 'm':
     case 'M':
@@ -210,7 +210,7 @@ void UI::listRelationship()
     case '1':
         cleanScreen();
         cout << "################## FAMOUS COMPUTERS ##################" << endl << endl;
-        cout << "Skipta mer ut fyrir fallid sem  synir tolvur i stafrofsrod" << endl;
+        cout << "Skipta mer ut fyrir fallid sem synir tolvur i stafrofsrod" << endl;
         break;
     case '2':
         cleanScreen();
@@ -220,7 +220,7 @@ void UI::listRelationship()
     case '3':
         cleanScreen();
         cout << "################ SCIENTISTS & COMPUTERS ##############" << endl << endl;
-        cout << "Skipta mer tu fyrir fallid sem synir tolvur eftir byggingar ari" << endl;
+        cout << "Skipta mer ut fyrir fallid sem synir tolvur eftir byggingar ari" << endl;
         break;
     case 'm':
     case 'M':
