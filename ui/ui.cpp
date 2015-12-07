@@ -210,17 +210,14 @@ void UI::listRelationship()
     case '1':
         cleanScreen();
         cout << "################## FAMOUS COMPUTERS ##################" << endl << endl;
-        cout << "Skipta mer ut fyrir fallid sem synir tolvur i stafrofsrod" << endl;
+        cout << "Skipta mer ut fyrir fallid sem synir lista af tölvum og ID numer" << endl;
+        selectComputerID();
         break;
     case '2':
         cleanScreen();
         cout << "################## FAMOUS SCIENTISTS #################" << endl << endl;
-        cout << "Skipta mer ut fyrir fallid sem  sýnir tolvur i ofugri stafrofsrod" << endl;
-        break;
-    case '3':
-        cleanScreen();
-        cout << "################ SCIENTISTS & COMPUTERS ##############" << endl << endl;
-        cout << "Skipta mer ut fyrir fallid sem synir tolvur eftir byggingar ari" << endl;
+        cout << "Skipta mer ut fyrir fallid sem  sýnir lista af visindamonnum og ID numer" << endl;
+        selectSientistID();
         break;
     case 'm':
     case 'M':
@@ -237,4 +234,24 @@ void UI::listRelationship()
         break;
     }
 }
+
+void UI::selectComputerID()
+{
+    int id;
+
+    cout << "ID: ";
+    cin >> id;
+    cout << "Skipta mer ut fyrir fallid sem synir tolvu og venslada visindamenn" << endl;
+
+}
+
+void UI::selectSientistID()
+{
+    int id;
+
+    cout << "ID: ";
+    cin >> id;
+    cout << "Skipta mer ut fyrir fallid sem synir visindamann og vensladar tolvur" << endl;
+}
+
 
