@@ -79,9 +79,28 @@ void Data::SortByGenderM()
         query.exec();
         while(query.next())
             {
+            cout << "hello";
                 name = query.value("Name").toString().toStdString();
                 gender = query.value("Gender").toString().toStdString();
                 born = query.value("Born").toUInt();
                 died = query.value("Died").toUInt();
             }
+}
+void Data::SortByCpuName()
+{
+    openDatabase();
+        QSqlQuery query(db);
+        query.prepare("SELECT * FROM Computers ORDER BY Name");
+        query.bindValue("Name", QString::fromStdString("*"));
+        query.bindValue("Year", QString::fromStdString("*"));
+        query.bindValue("Type", QString::fromStdString("*"));
+        while(query.next())
+        {
+            cout << "Hello";
+            name = query.value("Name").toString().toStdString();
+            year = query.value("Year").toUInt();
+            type = query.value("Type").toString().toStdString();
+            cout << name << " ";
+        }
+
 }

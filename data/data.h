@@ -23,10 +23,11 @@ public:
     void SortByNameB();
     void SortByGenderF();
     void SortByGenderM();
+    void SortByCpuName();
 private:
     void openDatabase();
-    int born, died;
-    string name, gender;
+    int born, died, year;
+    string name, gender, type;
 
 };
 
